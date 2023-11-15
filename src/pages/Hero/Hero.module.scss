@@ -1,0 +1,75 @@
+.container {
+    padding-top: 140px;
+    background-image: url('../../../public/hero-background.png');
+    /* todo-  height should be remove */
+    height: 100vh;
+    
+
+    .bgHeroCard {
+        margin: auto;
+        background-image: url('../../assets/images/heroCard.png');
+        background-repeat: no-repeat;
+        width: max-content;
+        background-size: 100% 100%;
+        cursor: url('../../assets/icon/arrow-right-3.png'),pointer;
+        transform-origin: top center;
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .heroCard {
+        article {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+        }
+
+        padding: 80px 83px 0px 86px;
+        display: flex;
+        margin: auto;
+
+        h1 {
+            margin: 20px 0px;
+            font-size: 61px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 66.743px;
+            letter-spacing: -0.24px;
+        }
+
+        .heroLeftBlock {
+            margin: 0px 50px;
+            object-fit: contain;
+        }
+
+        .grey {
+            color: var(--clr-grey-600);
+        }
+
+        .slickCard {
+            background-color: var(--clr-purple);
+            color: var(--clr-white);
+            border-radius: 8342.023px;
+            padding: 5px;
+            padding-left: 8px;
+            width: max-content;
+            font-size: 14px;
+            font-weight: 400;
+
+
+            .spacingArrowRight {
+                margin-left: 5px;
+                margin-right: 3px;
+            }
+
+            /* &:hover {
+                .spacingArrowRight {
+                    margin-left: 14px;
+                }
+            } */
+
+
+        }
+    }
+}
