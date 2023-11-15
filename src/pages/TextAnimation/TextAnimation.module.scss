@@ -1,0 +1,37 @@
+.textContainer {
+
+    /* margin: auto; */
+    font-family: Inter;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 62px;
+    letter-spacing: -0.62px;
+    max-width: 76rem;
+}
+
+.textContainer{
+    /* border: 1px solid yellow; */
+    height: 100vh;
+    padding: 0 clamp(4rem, 12vw, 20rem);
+    /* display: grid; */
+    place-content: center;
+    opacity: 2;
+    h2 {
+        word-wrap: break-word;
+        font-size: clamp(2rem, 5vw, 8rem);
+    }
+
+    &:nth-of-type(1) {
+        border-bottom: 1px solid black;
+    }
+
+    &:nth-of-type(3) {
+        background: #ffff00;
+    }
+
+    &:nth-of-type(4) {
+        background: rgb(29, 29, 29);
+        color: white;
+    }
+}
