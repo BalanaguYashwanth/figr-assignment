@@ -5,7 +5,6 @@ import { ScrollTrigger } from 'gsap/all';
 import gsap from 'gsap';
 
 const TextAnimation = () => {
-
     
     useLayoutEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
@@ -24,7 +23,7 @@ const TextAnimation = () => {
                     pin: true,
                  },
                  opacity:0.5,
-                 stagger:1,
+                 stagger:5,
                  
             })
        })
