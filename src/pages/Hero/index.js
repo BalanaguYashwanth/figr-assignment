@@ -28,7 +28,7 @@ const Hero = () => {
       trigger: "#scrollElement",
       // start: "560px 60%",
       // end: "100% 100%",
-      start:'260px center',
+      start:'330px center',
       markers:false,
       scrub: 0.2,
     });

@@ -24,7 +24,7 @@ const TextAnimation = () => {
                     pin: true,
                  },
                  opacity:0.5,
-                 stagger:0.1,
+                 stagger:1,
                  
             })
        })
