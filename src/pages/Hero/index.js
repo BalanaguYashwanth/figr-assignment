@@ -1,7 +1,7 @@
 import styles from "./Hero.module.scss";
 import heroLeftCard from "../../assets/images/heroLeft.png";
 import arrowRight from "../../assets/icon/arrow-right.svg";
-import gsap from "gsap";
+import gsap, { Power3 } from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 
@@ -21,24 +21,27 @@ const Hero = () => {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    gsap.to('.card',.8,{opacity:1,y:-20,ease:Power3.easeOut})
+    gsap.to('.headerText',.8,{opacity:1,y:-20,ease:Power3.easeOut, delay:.2})
+
     const tl = gsap.timeline();
 
     ScrollTrigger.create({
       animation: tl,
-      trigger: "#scrollElement",
+      trigger: ".card",
       start:'410px center',
       markers:false,
       scrub: 0.2,
     });
 
-    tl.to(".card", { rotationX: -125 });
+    tl.to(".card", { rotationX: -60 });
   }, []);
 
   return (
     <main className={styles.container}>
       <section className={` card ${styles.bgHeroCard}`}>
         <section className={styles.heroCard}>
-          <article style={{ width: "400px" }}>
+          <article style={{ width: "400px" }} className="headerText">
             <div
               className={styles.slickCard}
               onMouseEnter={onEnter}
