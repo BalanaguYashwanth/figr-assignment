@@ -27,7 +27,6 @@ const Workflow = () => {
           trigger: ".card1",
           start: "10px center",
           end:'50px center',
-          markers:true,
           scrub: true,
         },
         duration:3,
@@ -39,7 +38,6 @@ const Workflow = () => {
           start: "-211px center",
           end:'-80px center',
           scrub: true,
-          markers:true,
         },
         duration:3,
         display:'block',
@@ -50,7 +48,6 @@ const Workflow = () => {
           start: "-80px center",
           end:'100px center',
           scrub: true,
-          markers:true,
         },
         onStart:()=>{
           for (let element of document.getElementsByClassName("card2")){
