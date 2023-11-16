@@ -26,14 +26,12 @@ const Hero = () => {
     ScrollTrigger.create({
       animation: tl,
       trigger: "#scrollElement",
-      // start: "560px 60%",
-      // end: "100% 100%",
-      start:'330px center',
+      start:'410px center',
       markers:false,
       scrub: 0.2,
     });
 
-    tl.to(".card", { rotationX: -80 });
+    tl.to(".card", { rotationX: -125 });
   }, []);
 
   return (
