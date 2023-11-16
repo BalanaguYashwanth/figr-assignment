@@ -25,41 +25,39 @@ const Workflow = () => {
       t1.current = gsap.timeline().to(".card1", {
         scrollTrigger: {
           trigger: ".card1",
-          start: "-60px center",
-          end:'90px center',
+          start: "10px center",
+          end:'50px center',
           markers:true,
           scrub: true,
         },
+        duration:3,
         display:'none',
-        onComplete:()=>{
-          for (let element of document.getElementsByClassName("card2")){
-            element.style.display="block";
-         }
-        }
       })
       .to(".card2", {
         scrollTrigger: {
           trigger: ".card2",
-          start: "-90px center",
-          end:'-60px center',
+          start: "-211px center",
+          end:'-80px center',
           scrub: true,
           markers:true,
         },
-        display:'none',
-        onComplete:()=>{
-          for (let element of document.getElementsByClassName("card3")){
-            element.style.display="block";
-         }
-        }
+        duration:3,
+        display:'block',
       })
       .to(".card3", {
         scrollTrigger: {
-          trigger: ".card2",
-          start: "-90px center",
-          end:'-60px center',
+          trigger: ".card3",
+          start: "-80px center",
+          end:'100px center',
           scrub: true,
           markers:true,
         },
+        onStart:()=>{
+          for (let element of document.getElementsByClassName("card2")){
+            element.style.display="none";
+         }
+        },
+        duration:3,
         display:'block'
       })
     }, app);
@@ -74,8 +72,8 @@ const Workflow = () => {
         <img
           src={card1}
           alt="card1"
-          width={340}
-          height={350}
+          width={350}
+          height={340}
           className={`card1`}
         />
         {/* </div>
